@@ -5,6 +5,7 @@ import {
   View,
   Platform,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { useState, useEffect } from "react";
 import Header from "./src/components/Header";
@@ -75,6 +76,9 @@ export default function App() {
           </Text>
         </TouchableOpacity>
         <StatusBar style="auto" />
+        <View>
+          <Image source={require("./assets/crono.png")} style={styles.crono} />
+        </View>
       </View>
     </View>
   );
@@ -94,5 +98,11 @@ const styles = StyleSheet.create({
     padding: 15,
     marginTop: 15,
     borderRadius: 15,
+  },
+  crono: {
+    position: "absolute",
+    marginVertical: 50,
+    width: 350,
+    height: 350,
   },
 });
